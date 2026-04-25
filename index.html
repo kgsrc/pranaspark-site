@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pranaspark LLC — AI, Robotics & Physical AI</title>
-    <meta name="description" content="Pranaspark LLC delivers cutting-edge tech consulting, AI/ML solutions, robotics, and physical AI product development.">
+    <title>Pranaspark LLC — The AI & robotics stack behind your product</title>
+    <meta name="description" content="Pranaspark LLC is a stealth technology partner that builds the AI, ML, and robotics stack behind partner brands — models, software, edge inference, and data infrastructure.">
+    <meta property="og:title" content="Pranaspark LLC — The AI & robotics stack behind your product">
+    <meta property="og:description" content="A stealth technology partner. We build the AI, ML, and robotics stack behind partner brands.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pranaspark.ai">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
@@ -318,8 +323,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
             margin-bottom: 1.2rem;
+            color: var(--accent-light);
+        }
+
+        .service-icon svg {
+            width: 22px;
+            height: 22px;
+            stroke: currentColor;
+            stroke-width: 1.75;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
         }
 
         .service-card h3 {
@@ -334,8 +349,34 @@
             line-height: 1.7;
         }
 
-        /* ── Portfolio ── */
-        #portfolio { border-top: 1px solid var(--border); }
+        /* ── Advantage ── */
+        #advantage { border-top: 1px solid var(--border); }
+
+        .advantage-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent-light);
+            letter-spacing: 0.18em;
+            margin-bottom: 1rem;
+        }
+
+        .advantage-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 1.2rem;
+        }
+
+        /* ── Partnership ── */
+        #partnership { border-top: 1px solid var(--border); }
+
+        .partnership-intro {
+            color: var(--text-muted);
+            max-width: 720px;
+            font-size: 1.02rem;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+        }
 
         .portfolio-grid {
             display: grid;
@@ -407,7 +448,33 @@
             line-height: 1.6;
         }
 
-        /* ── Blog ── */
+        /* ── Writing ── */
+        #writing { border-top: 1px solid var(--border); }
+
+        .writing-empty {
+            margin-top: 2rem;
+            padding: 3rem 2rem;
+            border: 1px dashed var(--border);
+            border-radius: 12px;
+            text-align: center;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            letter-spacing: 0.02em;
+        }
+
+        .writing-empty .pulse {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-light);
+            margin-right: 0.5rem;
+            animation: pulse-dot 2s ease-in-out infinite;
+            vertical-align: middle;
+        }
+
+        /* ── Blog (legacy, kept for future) ── */
         #blog { border-top: 1px solid var(--border); }
 
         .blog-grid {
@@ -602,9 +669,10 @@
 <nav>
     <div class="logo">pranaspark <span>llc</span></div>
     <ul class="nav-links" id="navLinks">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#blog">Blog</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#advantage">Advantage</a></li>
+        <li><a href="#partnership">Partnership</a></li>
+        <li><a href="#writing">Writing</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -617,135 +685,162 @@
     <div class="hero-content fade-up">
         <div class="hero-badge">
             <span class="dot"></span>
-            Available for new projects
+            Currently powering an outdoor-sports safety detector
         </div>
-        <h1>Building the future with <span class="highlight">AI & Robotics</span></h1>
-        <p>Pranaspark LLC is a tech consulting firm specializing in AI/ML, robotics, and physical AI product development. We turn ambitious ideas into production-ready systems.</p>
+        <h1>The <span class="highlight">AI & robotics stack</span> behind your product.</h1>
+        <p>Pranaspark LLC is a stealth technology partner. We build the models, software, edge inference, and data infrastructure that brands ship under their own name — so the partner can focus on product, market, and customer.</p>
         <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary">Start a Project</a>
-            <a href="#portfolio" class="btn btn-outline">View Our Work</a>
+            <a href="#contact" class="btn btn-primary">Start a Conversation</a>
+            <a href="#partnership" class="btn btn-outline">How we partner</a>
         </div>
     </div>
 </section>
 
-<!-- Services -->
-<section id="services">
+<!-- Capabilities -->
+<section id="capabilities">
     <div class="container">
         <div class="fade-up">
-            <div class="section-label">// what we do</div>
-            <h2 class="section-title">Services</h2>
-            <p class="section-subtitle">End-to-end technical expertise from prototyping to production deployment.</p>
+            <div class="section-label">// the stack we deliver</div>
+            <h2 class="section-title">Capabilities</h2>
+            <p class="section-subtitle">The engineering layers we own as the technology arm of partner brands.</p>
         </div>
         <div class="services-grid">
             <div class="service-card fade-up">
-                <div class="service-icon">&#x1F9E0;</div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3a3 3 0 0 0-3 3v1a3 3 0 0 0-2 5 3 3 0 0 0 2 5v1a3 3 0 0 0 6 0V3a3 3 0 0 0-3 0Z"/><path d="M15 3a3 3 0 0 1 3 3v1a3 3 0 0 1 2 5 3 3 0 0 1-2 5v1a3 3 0 0 1-6 0"/></svg>
+                </div>
                 <h3>AI / ML Engineering</h3>
-                <p>Custom model development, training pipelines, and deployment of machine learning systems at scale. From NLP to computer vision.</p>
+                <p>Model training and fine-tuning, evaluation harnesses, and production inference. Computer vision, NLP, and multimodal systems built to ship.</p>
             </div>
             <div class="service-card fade-up">
-                <div class="service-icon">&#x1F916;</div>
-                <h3>Robotics & Physical AI</h3>
-                <p>Design and development of intelligent robotic systems, sensor fusion, motion planning, and embodied AI solutions.</p>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><polyline points="21 3 21 8 16 8"/><polyline points="3 21 3 16 8 16"/></svg>
+                </div>
+                <h3>ML Lifecycle &amp; Data Flywheels</h3>
+                <p>The full path from raw data to a model that keeps getting better — annotation and dataset curation, training and evaluation, delivery, and production maintenance. We lean heavily on data flywheels: production signal feeding back into training so models stay state-of-the-art over time, not just at launch.</p>
             </div>
             <div class="service-card fade-up">
-                <div class="service-icon">&#x2699;&#xFE0F;</div>
-                <h3>Product Development</h3>
-                <p>Full-cycle product engineering from concept to market. Hardware-software co-design, embedded systems, and IoT platforms.</p>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>
+                </div>
+                <h3>Robotics & Perception</h3>
+                <p>Sensor fusion, real-time detection, tracking, and on-device inference for physical-AI products operating outside the lab.</p>
             </div>
             <div class="service-card fade-up">
-                <div class="service-icon">&#x1F4CA;</div>
-                <h3>Tech Consulting</h3>
-                <p>Strategic technology guidance, architecture reviews, AI readiness assessments, and digital transformation roadmaps.</p>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-2.5 2.5-2.5Z"/></svg>
+                </div>
+                <h3>Product Engineering</h3>
+                <p>Hardware-software co-design, embedded systems, and the full path from prototype to production-grade device.</p>
             </div>
             <div class="service-card fade-up">
-                <div class="service-icon">&#x2601;&#xFE0F;</div>
-                <h3>MLOps & Infrastructure</h3>
-                <p>Scalable ML infrastructure, CI/CD for models, monitoring, and cloud-native deployment strategies.</p>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                </div>
+                <h3>Technical Strategy</h3>
+                <p>Architecture decisions, AI readiness, and the build-vs-buy calls that shape what your product can become 18 months from now.</p>
             </div>
             <div class="service-card fade-up">
-                <div class="service-icon">&#x1F50D;</div>
-                <h3>Research & Prototyping</h3>
-                <p>Rapid prototyping of novel systems, feasibility studies, and applied research to validate concepts before committing to production.</p>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="6" rx="2"/><rect x="3" y="15" width="18" height="6" rx="2"/><path d="M7 6h.01M7 18h.01"/></svg>
+                </div>
+                <h3>MLOps & Data Infra</h3>
+                <p>Training pipelines, model versioning, monitoring, and cloud-native deployment so models keep getting better in production.</p>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2v7.5L4 19a2 2 0 0 0 1.7 3h12.6A2 2 0 0 0 20 19l-6-9.5V2"/><path d="M8 2h8M7 15h10"/></svg>
+                </div>
+                <h3>Applied Research</h3>
+                <p>Feasibility studies, novel-method prototypes, and the evaluation work that decides whether something is worth productionizing.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Portfolio -->
-<section id="portfolio">
+<!-- Advantage -->
+<section id="advantage">
     <div class="container">
         <div class="fade-up">
-            <div class="section-label">// our work</div>
-            <h2 class="section-title">Portfolio</h2>
-            <p class="section-subtitle">Select projects showcasing our range of technical capabilities.</p>
+            <div class="section-label">// the advantage</div>
+            <h2 class="section-title">Why partner with Pranaspark.</h2>
+            <p class="section-subtitle">Decades of production AI and robotics experience, delivered with AI-native leverage — frontier methods at a fraction of legacy agency cost.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-up">
+                <div class="advantage-num">01 — TRACK RECORD</div>
+                <h3>Decades of production experience.</h3>
+                <p>Real systems shipped in pick-and-place and palletizing, robot safety, the full machine-learning model lifecycle, and edge inference. ROS / ROS2 is a daily tool, not a buzzword on a slide.</p>
+                <div class="advantage-pills">
+                    <span class="tag">Pick &amp; Place</span>
+                    <span class="tag">Palletizing</span>
+                    <span class="tag">Robot Safety</span>
+                    <span class="tag">ML Lifecycle</span>
+                    <span class="tag">Edge Systems</span>
+                    <span class="tag">ROS / ROS2</span>
+                </div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="advantage-num">02 — AI-NATIVE DELIVERY</div>
+                <h3>Senior-tier work at a fraction of legacy cost.</h3>
+                <p>We use AI aggressively in our own engineering — code generation, evaluation, simulation, content, and ops. That leverage compounds into the kind of reliability and velocity that used to require a fifteen-person team, delivered by an embedded crew at a fraction of the price.</p>
+            </div>
+            <div class="service-card fade-up">
+                <div class="advantage-num">03 — FRONTIER BY DEFAULT</div>
+                <h3>State-of-the-art, not last decade's stack.</h3>
+                <p>We build with what's working at the frontier today. Diffusion policies for manipulation, vision-language-action models for embodied control, VLMs for perception and reasoning, transformers across the stack — chosen on the merits, not because they're trendy.</p>
+                <div class="advantage-pills">
+                    <span class="tag">Diffusion Policies</span>
+                    <span class="tag">VLAs</span>
+                    <span class="tag">VLMs</span>
+                    <span class="tag">Transformers</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partnership -->
+<section id="partnership">
+    <div class="container">
+        <div class="fade-up">
+            <div class="section-label">// the model</div>
+            <h2 class="section-title">Partnership, not consulting.</h2>
+            <p class="partnership-intro">We embed as the technology arm of brands building physical-AI and ML-driven products. We own the stack — models, software, edge inference, data — so the partner can focus on product, market, and customer. One engagement, deeply, instead of a roster of clients.</p>
         </div>
         <div class="portfolio-grid">
             <div class="portfolio-card fade-up">
-                <div class="portfolio-img">&#x1F9BE;</div>
-                <div class="portfolio-body">
-                    <div class="portfolio-tags">
-                        <span class="tag">Robotics</span>
-                        <span class="tag">ROS2</span>
-                        <span class="tag">SLAM</span>
-                    </div>
-                    <h3>Autonomous Warehouse Robot</h3>
-                    <p>End-to-end development of an autonomous mobile robot for warehouse logistics with real-time obstacle avoidance and path planning.</p>
+                <div class="portfolio-img">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" style="width:56px;height:56px;stroke:var(--accent-light);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;fill:none;position:relative;z-index:1;">
+                        <path d="M3 18l6-12 4 8 3-5 5 9"/>
+                        <circle cx="9" cy="6" r="1.5"/>
+                        <circle cx="13" cy="14" r="1.5"/>
+                    </svg>
                 </div>
-            </div>
-            <div class="portfolio-card fade-up">
-                <div class="portfolio-img">&#x1F50E;</div>
                 <div class="portfolio-body">
                     <div class="portfolio-tags">
                         <span class="tag">Computer Vision</span>
                         <span class="tag">Edge AI</span>
+                        <span class="tag">Full Stack</span>
                     </div>
-                    <h3>Real-Time Defect Detection</h3>
-                    <p>ML-powered visual inspection system deployed on edge devices for a manufacturing client, achieving 99.2% defect detection accuracy.</p>
-                </div>
-            </div>
-            <div class="portfolio-card fade-up">
-                <div class="portfolio-img">&#x1F4AC;</div>
-                <div class="portfolio-body">
-                    <div class="portfolio-tags">
-                        <span class="tag">LLM</span>
-                        <span class="tag">RAG</span>
-                        <span class="tag">Python</span>
-                    </div>
-                    <h3>Enterprise Knowledge Assistant</h3>
-                    <p>Custom RAG-based conversational AI system that queries internal documentation, reducing support ticket resolution time by 60%.</p>
+                    <h3>Outdoor-sports safety detector</h3>
+                    <p>Acting as the embedded technology team for an outdoor-sports brand: detection models, edge deployment, mobile and backend software, and the data pipeline that keeps the system improving in the field.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Blog -->
-<section id="blog">
+<!-- Writing -->
+<section id="writing">
     <div class="container">
         <div class="fade-up">
-            <div class="section-label">// insights</div>
-            <h2 class="section-title">Blog</h2>
-            <p class="section-subtitle">Thoughts on AI, robotics, and building intelligent systems.</p>
+            <div class="section-label">// field notes</div>
+            <h2 class="section-title">Writing</h2>
+            <p class="section-subtitle">Technical write-ups on physical AI, edge ML, and building the partner-stack model. First posts coming soon.</p>
         </div>
-        <div class="blog-grid">
-            <a href="#" class="blog-card fade-up">
-                <div class="blog-date">Mar 28, 2026</div>
-                <h3>The Rise of Physical AI: Why Embodied Intelligence Matters</h3>
-                <p>Exploring the convergence of foundation models and robotics, and what it means for the next wave of AI applications.</p>
-                <span class="read-more">Read more &rarr;</span>
-            </a>
-            <a href="#" class="blog-card fade-up">
-                <div class="blog-date">Mar 12, 2026</div>
-                <h3>Deploying ML Models at the Edge: Lessons Learned</h3>
-                <p>Practical strategies for optimizing and shipping machine learning models to resource-constrained edge devices.</p>
-                <span class="read-more">Read more &rarr;</span>
-            </a>
-            <a href="#" class="blog-card fade-up">
-                <div class="blog-date">Feb 25, 2026</div>
-                <h3>Building Production RAG Systems That Actually Work</h3>
-                <p>Beyond the demo: techniques for building retrieval-augmented generation systems that are reliable at scale.</p>
-                <span class="read-more">Read more &rarr;</span>
-            </a>
+        <div class="writing-empty fade-up">
+            <span class="pulse"></span>In progress — first post drops shortly.
         </div>
     </div>
 </section>
@@ -755,27 +850,32 @@
     <div class="container">
         <div class="fade-up">
             <div class="section-label">// get in touch</div>
-            <h2 class="section-title">Let's Build Something</h2>
-            <p class="section-subtitle">Have a project in mind? We'd love to hear about it.</p>
+            <h2 class="section-title">Talk to us.</h2>
+            <p class="section-subtitle">If you're a brand building a physical-AI or ML-driven product and want a technology partner — not a consultant — start here.</p>
         </div>
         <div class="contact-grid fade-up">
             <div class="contact-info">
-                <p>Whether you're looking to integrate AI into your existing products, build a robotic system from scratch, or need strategic tech guidance — we're here to help.</p>
+                <p>We take on a small number of partnerships at a time. Tell us what you're building and what's in the way; we'll respond directly.</p>
                 <div class="contact-item">
-                    <div class="icon">&#x2709;</div>
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" fill="none" style="color:var(--accent-light)"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                    </div>
                     <span>hello@pranaspark.ai</span>
                 </div>
                 <div class="contact-item">
-                    <div class="icon">&#x1F310;</div>
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" fill="none" style="color:var(--accent-light)"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+                    </div>
                     <span>pranaspark.ai</span>
                 </div>
             </div>
-            <form class="contact-form" onsubmit="handleSubmit(event)">
-                <input type="text" placeholder="Your name" required>
-                <input type="email" placeholder="Your email" required>
-                <input type="text" placeholder="Project topic">
-                <textarea placeholder="Tell us about your project..."></textarea>
+            <form id="contactForm" class="contact-form" action="https://formspree.io/f/xjgjzyde" method="POST">
+                <input type="text" name="name" placeholder="Your name" required>
+                <input type="email" name="email" placeholder="Your email" required>
+                <input type="text" name="topic" placeholder="What you're building">
+                <textarea name="message" placeholder="A few sentences on the partnership you have in mind..."></textarea>
                 <button type="submit" class="btn btn-primary" style="width: fit-content;">Send Message</button>
+                <p id="formStatus" style="font-family:'JetBrains Mono',monospace;font-size:0.85rem;color:var(--text-muted);margin-top:0.5rem;display:none;"></p>
             </form>
         </div>
     </div>
@@ -784,7 +884,7 @@
 <!-- Footer -->
 <footer>
     <div class="logo-footer">pranaspark</div>
-    <p>&copy; 2026 Pranaspark LLC. All rights reserved.</p>
+    <p>&copy; 2026 Pranaspark LLC. The technology stack behind partner brands.</p>
 </footer>
 
 <script>
@@ -811,17 +911,41 @@
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-    // Form handler (placeholder)
-    function handleSubmit(e) {
-        e.preventDefault();
-        const btn = e.target.querySelector('button');
-        btn.textContent = 'Sent!';
-        btn.style.background = 'var(--success)';
-        setTimeout(() => {
-            btn.textContent = 'Send Message';
-            btn.style.background = '';
-            e.target.reset();
-        }, 2000);
+    // Contact form (Formspree AJAX)
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button[type="submit"]');
+            const status = document.getElementById('formStatus');
+            const original = btn.textContent;
+            btn.textContent = 'Sending…';
+            btn.disabled = true;
+            status.style.display = 'block';
+            status.style.color = 'var(--text-muted)';
+            status.textContent = '';
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (res.ok) {
+                    form.reset();
+                    btn.textContent = 'Sent';
+                    btn.style.background = 'var(--success)';
+                    status.style.color = 'var(--success)';
+                    status.textContent = '✓ Message received. We\'ll respond directly.';
+                } else {
+                    throw new Error('Request failed');
+                }
+            } catch (err) {
+                btn.textContent = original;
+                btn.disabled = false;
+                status.style.color = '#ff6b6b';
+                status.textContent = '✗ Something went wrong. Email hello@pranaspark.ai instead.';
+            }
+        });
     }
 </script>
 
