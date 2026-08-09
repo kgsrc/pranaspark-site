@@ -302,17 +302,23 @@
         }
 
         /* ── Animations ── */
-        .fade-up {
+        /* Scoped to .js so content is never stranded invisible without JS. */
+        .js .fade-up {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
-        .fade-up.visible {
+        .js .fade-up.visible {
             opacity: 1;
             transform: translateY(0);
         }
+
+        @media (prefers-reduced-motion: reduce) {
+            .js .fade-up { opacity: 1; transform: none; transition: none; }
+        }
     </style>
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
@@ -378,7 +384,12 @@
         });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    const fadeUps = document.querySelectorAll('.fade-up');
+    fadeUps.forEach(el => observer.observe(el));
+
+    // Failsafe: the contact section is the page's only content, so never leave
+    // it hidden if the observer doesn't fire (throttled or backgrounded tab).
+    setTimeout(() => fadeUps.forEach(el => el.classList.add('visible')), 2000);
 
     // Contact form (Formspree AJAX)
     const form = document.getElementById('contactForm');
